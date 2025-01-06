@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MIGT</title>
     <style>
         body {
@@ -10,18 +12,22 @@
             background-color: #f4f4f4;
         }
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #333;
             color: white;
-            padding: 20px 10px;
-            text-align: left; /* 왼쪽 정렬 */
+            padding: 20px;
         }
         header h1 {
             font-weight: bold; /* MIGT 글자 두껍게 설정 */
             cursor: pointer; /* 클릭 가능하게 설정 */
+            margin: 0; /* 기본 마진 제거 */
         }
         nav {
             display: flex;
             justify-content: center;
+            width: 100%;
             background-color: #444;
             padding: 10px 0;
         }
@@ -30,6 +36,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 16px; /* 카테고리 글자 크기 설정 */
         }
         nav a:hover {
             color: #00bfff;
@@ -41,17 +48,6 @@
         .category {
             margin: 20px 0;
             font-size: 18px; /* 카테고리 글자 크기 설정 */
-        }
-        .category h2 {
-            cursor: pointer;
-            color: #007BFF;
-            font-size: 16px; /* MIGT보다 작은 글자 크기 설정 */
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
         }
         .contact-button {
             background-color: #007BFF;
@@ -66,48 +62,21 @@
         .contact-button:hover {
             background-color: #0056b3;
         }
-
-        /* 중앙 배치 및 높이 설정 */
-        .categories-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px; /* MIGT와 같은 높이 설정 */
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav a {
-                margin: 10px 0;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
         <h1 onclick="window.location.href='#home'">MIGT</h1> <!-- MIGT 클릭 시 홈으로 이동 -->
     </header>
+    <nav>
+        <a href="#">에이펙스 핵</a>
+        <a href="#">배그 핵</a>
+        <a href="#">발로란트 핵</a>
+        <a href="#">기타</a>
+    </nav>
     <main>
         <section id="home">
             <h2>마이트 샵에 오신걸 환영합니다</h2> <!-- 문구 변경 -->
-        </section>
-        <section class="categories-container">
-            <div class="category">
-                <h2>에이펙스 핵</h2> <!-- 카테고리 이름 변경 -->
-            </div>
-            <div class="category">
-                <h2>배그 핵</h2> <!-- 카테고리 이름 변경 -->
-            </div>
-            <div class="category">
-                <h2>발로란트 핵</h2> <!-- 카테고리 이름 변경 -->
-            </div>
-            <div class="category">
-                <h2>기타</h2> <!-- 카테고리 이름 변경 -->
-            </div>
         </section>
         <section id="contact">
             <h2>
