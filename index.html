@@ -9,7 +9,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #ffffff; /* 배경을 흰색으로 설정 */
+            transition: margin-top 0.3s; /* 스크롤 시 부드러운 전환 효과 */
         }
         header {
             display: flex;
@@ -18,11 +19,18 @@
             background-color: #333;
             color: white;
             padding: 20px;
+            position: fixed; /* 고정 위치 */
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* 다른 요소 위에 표시 */
+            transition: top 0.3s; /* 스크롤 시 부드러운 전환 효과 */
         }
         header h1 {
-            font-weight: bold; /* MIGT 글자 두껍게 설정 */
-            cursor: pointer; /* 클릭 가능하게 설정 */
-            margin: 0; /* 기본 마진 제거 */
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0;
+            font-size: 36px; /* MIGT 글자 크기 증가 */
         }
         nav {
             display: flex;
@@ -30,24 +38,25 @@
             width: 100%;
             background-color: #444;
             padding: 10px 0;
+            margin-left: 20px; /* 왼쪽 여백 추가 */
         }
         nav a {
-            margin: 0 15px;
+            margin: 0 30px; /* 카테고리 간격 넓히기 */
             color: white;
             text-decoration: none;
             font-weight: bold;
-            font-size: 16px; /* 카테고리 글자 크기 설정 */
+            font-size: 18px; /* 카테고리 글자 크기 증가 */
         }
         nav a:hover {
             color: #00bfff;
         }
         main {
-            padding: 20px;
-            text-align: center; /* 중앙 정렬 */
+            padding: 80px 20px; /* 헤더 아래 여백 추가 */
+            text-align: center;
         }
         .category {
             margin: 20px 0;
-            font-size: 18px; /* 카테고리 글자 크기 설정 */
+            font-size: 18px;
         }
         .contact-button {
             background-color: #007BFF;
@@ -63,10 +72,23 @@
             background-color: #0056b3;
         }
     </style>
+    <script>
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function() {
+            const header = document.querySelector("header");
+            const st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st > lastScrollTop) {
+                header.style.top = "-80px"; // 헤더 숨기기
+            } else {
+                header.style.top = "0"; // 헤더 보이기
+            }
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        });
+    </script>
 </head>
 <body>
     <header>
-        <h1 onclick="window.location.href='#home'">MIGT</h1> <!-- MIGT 클릭 시 홈으로 이동 -->
+        <h1 onclick="window.location.href='#home'">MIGT</h1>
     </header>
     <nav>
         <a href="#">에이펙스 핵</a>
@@ -76,11 +98,11 @@
     </nav>
     <main>
         <section id="home">
-            <h2>마이트 샵에 오신걸 환영합니다</h2> <!-- 문구 변경 -->
+            <h2>마이트 샵에 오신걸 환영합니다</h2>
         </section>
         <section id="contact">
             <h2>
-                <a href="https://t.me/+XVXdW9V9maszOGZl" class="contact-button" target="_blank">텔레그램 입장</a> <!-- 텔레그램 링크 설정 -->
+                <a href="https://t.me/+XVXdW9V9maszOGZl" class="contact-button" target="_blank">텔레그램 입장</a>
             </h2>
         </section>
     </main>
