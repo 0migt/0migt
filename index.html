@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Migt Shop</title>
+    <title>MIGT</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@
             background-color: #333;
             color: white;
             padding: 20px 10px;
-            text-align: center;
+            text-align: left; /* 왼쪽 정렬 */
         }
         nav {
             display: flex;
@@ -32,6 +32,7 @@
         }
         main {
             padding: 20px;
+            text-align: center; /* 중앙 정렬 */
         }
         .category {
             margin: 20px 0;
@@ -52,6 +53,19 @@
             color: white;
             text-align: center;
             padding: 10px 0;
+        }
+        .contact-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-button:hover {
+            background-color: #0056b3;
         }
 
         /* Responsive Design */
@@ -74,46 +88,50 @@
 </head>
 <body>
     <header>
-        <h1>Migt Shop</h1>
+        <h1>MIGT</h1> <!-- Migt Shop에서 Shop을 제거 -->
     </header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#product">Products</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">홈</a> <!-- 홈으로 가는 버튼 활성화 -->
     </nav>
     <main>
         <section id="home">
-            <h2>Welcome to Migt Shop</h2>
-            <p>Explore our amazing products and services.</p>
+            <h2>마이트 샵에 오신걸 환영합니다</h2> <!-- 문구 변경 -->
         </section>
         <section id="product">
-            <h2>Our Products</h2>
+            <h2>우리의 제품</h2>
             <div class="category">
-                <h2 onclick="toggleDetails('category1')">Category 1</h2>
+                <h2 onclick="toggleDetails('category1')">에이펙스 핵</h2> <!-- 카테고리 이름 변경 -->
                 <div id="category1" class="category-details">
-                    <p>Details about Category 1 products.</p>
+                    <p>에이펙스 핵에 대한 세부 정보.</p>
                 </div>
             </div>
             <div class="category">
-                <h2 onclick="toggleDetails('category2')">Category 2</h2>
+                <h2 onclick="toggleDetails('category2')">배그 핵</h2> <!-- 카테고리 이름 변경 -->
                 <div id="category2" class="category-details">
-                    <p>Details about Category 2 products.</p>
+                    <p>배그 핵에 대한 세부 정보.</p>
                 </div>
             </div>
             <div class="category">
-                <h2 onclick="toggleDetails('category3')">Category 3</h2>
+                <h2 onclick="toggleDetails('category3')">발로란트 핵</h2> <!-- 카테고리 이름 변경 -->
                 <div id="category3" class="category-details">
-                    <p>Details about Category 3 products.</p>
+                    <p>발로란트 핵에 대한 세부 정보.</p>
+                </div>
+            </div>
+            <div class="category">
+                <h2 onclick="toggleDetails('category4')">기타</h2> <!-- 카테고리 이름 변경 -->
+                <div id="category4" class="category-details">
+                    <p>기타 제품에 대한 세부 정보.</p>
                 </div>
             </div>
         </section>
         <section id="contact">
-            <h2>Contact Us</h2>
-            <p>For inquiries, visit our <a href="https://www.example.com" target="_blank">contact page</a>.</p>
+            <h2>
+                <a href="https://t.me/your_telegram_link" class="contact-button" target="_blank">텔레그램 입장</a> <!-- 버튼 형식으로 변경 -->
+            </h2>
         </section>
     </main>
     <footer>
-        &copy; 2025 Migt Shop
+        &copy; 2025 MIGT
     </footer>
 </body>
 </html>
