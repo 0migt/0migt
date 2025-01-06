@@ -15,6 +15,10 @@
             padding: 20px 10px;
             text-align: left; /* 왼쪽 정렬 */
         }
+        header h1 {
+            font-weight: bold; /* MIGT 글자 두껍게 설정 */
+            cursor: pointer; /* 클릭 가능하게 설정 */
+        }
         nav {
             display: flex;
             justify-content: center;
@@ -36,17 +40,12 @@
         }
         .category {
             margin: 20px 0;
+            font-size: 18px; /* 카테고리 글자 크기 설정 */
         }
         .category h2 {
             cursor: pointer;
             color: #007BFF;
-        }
-        .category-details {
-            display: none;
-            padding: 10px;
-            background-color: #e9e9e9;
-            margin: 10px 0;
-            border: 1px solid #ccc;
+            font-size: 16px; /* MIGT보다 작은 글자 크기 설정 */
         }
         footer {
             background-color: #333;
@@ -68,6 +67,14 @@
             background-color: #0056b3;
         }
 
+        /* 중앙 배치 및 높이 설정 */
+        .categories-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px; /* MIGT와 같은 높이 설정 */
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             nav {
@@ -79,54 +86,32 @@
             }
         }
     </style>
-    <script>
-        function toggleDetails(id) {
-            const element = document.getElementById(id);
-            element.style.display = element.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
 </head>
 <body>
     <header>
-        <h1>MIGT</h1> <!-- Migt Shop에서 Shop을 제거 -->
+        <h1 onclick="window.location.href='#home'">MIGT</h1> <!-- MIGT 클릭 시 홈으로 이동 -->
     </header>
-    <nav>
-        <a href="#home">홈</a> <!-- 홈으로 가는 버튼 활성화 -->
-    </nav>
     <main>
         <section id="home">
             <h2>마이트 샵에 오신걸 환영합니다</h2> <!-- 문구 변경 -->
         </section>
-        <section id="product">
-            <h2>우리의 제품</h2>
+        <section class="categories-container">
             <div class="category">
-                <h2 onclick="toggleDetails('category1')">에이펙스 핵</h2> <!-- 카테고리 이름 변경 -->
-                <div id="category1" class="category-details">
-                    <p>에이펙스 핵에 대한 세부 정보.</p>
-                </div>
+                <h2>에이펙스 핵</h2> <!-- 카테고리 이름 변경 -->
             </div>
             <div class="category">
-                <h2 onclick="toggleDetails('category2')">배그 핵</h2> <!-- 카테고리 이름 변경 -->
-                <div id="category2" class="category-details">
-                    <p>배그 핵에 대한 세부 정보.</p>
-                </div>
+                <h2>배그 핵</h2> <!-- 카테고리 이름 변경 -->
             </div>
             <div class="category">
-                <h2 onclick="toggleDetails('category3')">발로란트 핵</h2> <!-- 카테고리 이름 변경 -->
-                <div id="category3" class="category-details">
-                    <p>발로란트 핵에 대한 세부 정보.</p>
-                </div>
+                <h2>발로란트 핵</h2> <!-- 카테고리 이름 변경 -->
             </div>
             <div class="category">
-                <h2 onclick="toggleDetails('category4')">기타</h2> <!-- 카테고리 이름 변경 -->
-                <div id="category4" class="category-details">
-                    <p>기타 제품에 대한 세부 정보.</p>
-                </div>
+                <h2>기타</h2> <!-- 카테고리 이름 변경 -->
             </div>
         </section>
         <section id="contact">
             <h2>
-                <a href="https://t.me/your_telegram_link" class="contact-button" target="_blank">텔레그램 입장</a> <!-- 버튼 형식으로 변경 -->
+                <a href="https://t.me/+XVXdW9V9maszOGZl" class="contact-button" target="_blank">텔레그램 입장</a> <!-- 텔레그램 링크 설정 -->
             </h2>
         </section>
     </main>
