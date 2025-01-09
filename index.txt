@@ -53,11 +53,26 @@
             margin: 0 auto;
         }
         .product {
+            width: 300px;
+            height: 500px;
             background-color: #1f1f1f;
             border: 2px solid #ffffff;
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
             text-align: center;
             cursor: pointer;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            max-height: 80%;
+        }
+        .product-name {
+            font-size: 18px;
+            margin-top: 10px;
         }
         .footer {
             text-align: center;
@@ -98,12 +113,30 @@
         <p>텔레그램 입장</p>
     </div>
     <section class="products">
-        <div class="product" onclick="location.href='product1.html'">제품 1</div>
-        <div class="product" onclick="location.href='product2.html'">제품 2</div>
-        <div class="product" onclick="location.href='product3.html'">제품 3</div>
-        <div class="product" onclick="location.href='product4.html'">제품 4</div>
-        <div class="product" onclick="location.href='product5.html'">제품 5</div>
-        <div class="product" onclick="location.href='product6.html'">제품 6</div>
+        <div class="product" onclick="location.href='product1.html'">
+            <img src="product1.jpg" alt="제품 1">
+            <div class="product-name">제품 1</div>
+        </div>
+        <div class="product" onclick="location.href='product2.html'">
+            <img src="product2.jpg" alt="제품 2">
+            <div class="product-name">제품 2</div>
+        </div>
+        <div class="product" onclick="location.href='product3.html'">
+            <img src="product3.jpg" alt="제품 3">
+            <div class="product-name">제품 3</div>
+        </div>
+        <div class="product" onclick="location.href='product4.html'">
+            <img src="product4.jpg" alt="제품 4">
+            <div class="product-name">제품 4</div>
+        </div>
+        <div class="product" onclick="location.href='product5.html'">
+            <img src="product5.jpg" alt="제품 5">
+            <div class="product-name">제품 5</div>
+        </div>
+        <div class="product" onclick="location.href='product6.html'">
+            <img src="product6.jpg" alt="제품 6">
+            <div class="product-name">제품 6</div>
+        </div>
     </section>
     <div class="footer">
         <a href="https://t.me/+XVXdW9V9maszOGZl" target="_blank">텔레그램 링크로 이동</a>
