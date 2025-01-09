@@ -40,16 +40,31 @@
         .hero {
             text-align: center;
             padding: 50px 20px;
+            position: relative;
         }
-        .hero h1 {
+        .hero img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .hero-content h1 {
             font-size: 36px;
             margin-bottom: 20px;
         }
-        .hero h2 {
+        .hero-content h2 {
             font-size: 28px;
             margin-bottom: 10px;
         }
-        .hero p {
+        .hero-content p {
             font-size: 20px;
             line-height: 1.6;
         }
@@ -82,11 +97,14 @@
         </nav>
     </header>
     <div class="hero">
-        <h1>마이트샵에 오신걸 환영합니다!</h1>
-        <h2>게임을 더 즐겁게 즐겨보세요!</h2>
-        <p>DMA치트, 슬롯 전문 SHOP!<br>
-        다양한 치트도 취급합니다.<br>
-        최고의 서비스에서 즐겨보세요.</p>
+        <img src="hero-image.jpg" alt="Main Hero Image">
+        <div class="hero-content">
+            <h1>마이트샵에 오신걸 환영합니다!</h1>
+            <h2>게임을 더 즐겁게 즐겨보세요!</h2>
+            <p>DMA치트, 슬롯 전문 SHOP!<br>
+            다양한 치트도 취급합니다.<br>
+            최고의 서비스에서 즐겨보세요.</p>
+        </div>
     </div>
     <div class="telegram-box">
         <a href="https://t.me/+XVXdW9V9maszOGZl" target="_blank">텔레그램 입장</a>
