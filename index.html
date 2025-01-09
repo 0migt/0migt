@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIGT - 에이펙스</title>
+    <title>MIGT</title>
     <style>
         body {
             margin: 0;
@@ -37,42 +37,53 @@
         nav a:hover {
             text-decoration: underline;
         }
-        .products-section {
-            text-align: center;
-            padding: 50px;
-        }
-        .products-section h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        .products {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .product {
-            width: 250px;
-            height: 350px;
-            background-color: #1f1f1f;
-            border: 2px solid #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            cursor: pointer;
-        }
-        .product img {
+        .hero {
+            position: relative;
             width: 100%;
-            height: auto;
-            max-height: 80%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hero img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
-        .product-name {
-            font-size: 18px;
-            margin-top: 10px;
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero-content h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero-content p {
+            font-size: 24px;
+            line-height: 1.6;
+        }
+        .telegram-box {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .telegram-box a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        .telegram-box a:hover {
+            background-color: #218838;
         }
     </style>
 </head>
@@ -80,40 +91,24 @@
     <header>
         <h1 onclick="location.href='index.html'">MIGT</h1>
         <nav>
-            <a href="apex.html" id="cat1">에이펙스</a>
+            <a href="#" id="cat1">에이펙스</a>
             <a href="#" id="cat2">발로란트</a>
             <a href="#" id="cat3">러스트</a>
             <a href="#" id="others">DMA 장치</a>
         </nav>
     </header>
-    <div class="products-section">
-        <h1>에이펙스</h1>
-        <div class="products">
-            <div class="product" onclick="location.href='product1.html'">
-                <img src="product1.jpg" alt="제품 1">
-                <div class="product-name">제품 1</div>
-            </div>
-            <div class="product" onclick="location.href='product2.html'">
-                <img src="product2.jpg" alt="제품 2">
-                <div class="product-name">제품 2</div>
-            </div>
-            <div class="product" onclick="location.href='product3.html'">
-                <img src="product3.jpg" alt="제품 3">
-                <div class="product-name">제품 3</div>
-            </div>
-            <div class="product" onclick="location.href='product4.html'">
-                <img src="product4.jpg" alt="제품 4">
-                <div class="product-name">제품 4</div>
-            </div>
-            <div class="product" onclick="location.href='product5.html'">
-                <img src="product5.jpg" alt="제품 5">
-                <div class="product-name">제품 5</div>
-            </div>
-            <div class="product" onclick="location.href='product6.html'">
-                <img src="product6.jpg" alt="제품 6">
-                <div class="product-name">제품 6</div>
-            </div>
+    <div class="hero">
+        <img src="hero-image.jpg" alt="Main Hero Image">
+        <div class="hero-content">
+            <h1>마이트샵에 오신걸 환영합니다!</h1>
+            <h2>게임을 더 즐겁게 즐겨보세요!</h2>
+            <p>DMA치트, 슬롯 전문 SHOP!<br>
+            다양한 치트도 취급합니다.<br>
+            최고의 서비스에서 즐겨보세요.</p>
         </div>
+    </div>
+    <div class="telegram-box">
+        <a href="https://t.me/+XVXdW9V9maszOGZl" target="_blank">텔레그램 입장</a>
     </div>
 </body>
 </html>
