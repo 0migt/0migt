@@ -17,6 +17,7 @@
             align-items: center;
             padding: 20px;
             background-color: #1f1f1f;
+            position: relative;
         }
         header h1 {
             margin: 0;
@@ -26,7 +27,6 @@
         nav {
             display: flex;
             gap: 40px;
-            justify-content: center;
             align-items: center;
         }
         nav a {
@@ -36,6 +36,21 @@
         }
         nav a:hover {
             text-decoration: underline;
+        }
+        .contact-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-btn:hover {
+            background-color: #218838;
         }
         .hero {
             position: relative;
@@ -69,22 +84,6 @@
             font-size: 24px;
             line-height: 1.6;
         }
-        .telegram-box {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .telegram-box a {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #28a745;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 20px;
-            border-radius: 5px;
-        }
-        .telegram-box a:hover {
-            background-color: #218838;
-        }
     </style>
 </head>
 <body>
@@ -96,6 +95,7 @@
             <a href="rust.html" id="cat3">러스트</a>
             <a href="dma.html" id="others">DMA 장치</a>
         </nav>
+        <a href="https://t.me/+XVXdW9V9maszOGZl" class="contact-btn" target="_blank">문의하기</a>
     </header>
     <div class="hero">
         <img src="hero-image.jpg" alt="Main Hero Image">
@@ -106,9 +106,6 @@
             다양한 치트도 취급합니다.<br>
             최고의 서비스에서 즐겨보세요.</p>
         </div>
-    </div>
-    <div class="telegram-box">
-        <a href="https://t.me/+XVXdW9V9maszOGZl" target="_blank">텔레그램 입장</a>
     </div>
 </body>
 </html>
