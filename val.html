@@ -51,42 +51,37 @@
         .contact-btn:hover {
             background-color: #218838;
         }
-        .products-section {
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .products-section h1 {
-            font-size: 36px;
-            margin-bottom: 30px;
-        }
-        .products {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            justify-content: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .product {
-            width: 250px;
-            height: 350px;
-            background-color: #1f1f1f;
-            border: 2px solid #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-        .product img {
+        .hero {
+            position: relative;
             width: 100%;
-            height: auto;
-            max-height: 80%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hero img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
-        .product-name {
-            margin-top: 10px;
-            font-size: 18px;
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero-content h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero-content p {
+            font-size: 24px;
+            line-height: 1.6;
         }
     </style>
 </head>
